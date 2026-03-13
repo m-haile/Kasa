@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Accueil from "./pages/accueil/accueil.jsx";
+import Header from "./composants/Header/Header.jsx";
+import Footer from "./composants/Footer/Footer.jsx";
+import Thumb from "./composants/Thumb/Thumb.jsx";
+import Collapse from "./composants/Collapse/Collapse.jsx";
+
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Accueil />
+      <Collapse titre="Titre">Blabla</Collapse>
+      <Collapse titre="Équipements">
+        Climatisation <br />
+        Wi-Fi <br />
+        Cuisine <br />
+        Espace de travail
+        <br />
+        Fer à repasser
+        <br />
+        Sèche-cheveux
+        <br />
+        Cintres
+        <br />
+      </Collapse>
+      <Thumb
+        titreImage="il était un petit navire il était un petit navire"
+        imageUrl="https://www.popsci.com/wp-content/uploads/2023/05/15/ButterflyFamilyTree.png?quality=85"
+      />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
