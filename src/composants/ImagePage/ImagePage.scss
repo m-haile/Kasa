@@ -1,0 +1,15 @@
+.image-page {
+  position: relative;
+
+  img {
+    background-color: gray;
+    border-radius: 25px;
+    width: 1240px;
+    height: 223px;
+  }
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

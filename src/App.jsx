@@ -5,11 +5,14 @@ import Thumb from "./composants/Thumb/Thumb.jsx";
 import Collapse from "./composants/Collapse/Collapse.jsx";
 
 import "./App.css";
+import ImagePage from "./composants/ImagePage/ImagePage.jsx";
+
+import Montagne from "./assets/montagne.png";
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Accueil />
       <Collapse titre="Titre">Blabla</Collapse>
       <Collapse titre="Équipements">
@@ -29,7 +32,8 @@ function App() {
         titreImage="il était un petit navire il était un petit navire"
         imageUrl="https://www.popsci.com/wp-content/uploads/2023/05/15/ButterflyFamilyTree.png?quality=85"
       />
-      <Footer />
+      <Footer /> */}
+      <ImagePage image={Montagne} titre="L'image de montagne" />
     </>
   );
 }

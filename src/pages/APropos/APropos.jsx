@@ -1,6 +1,6 @@
 import Collapse from "../../composants/Collapse/Collapse";
 import "./APropos.scss";
-import ImagePage from "../../composants/Image-page/Image-page.jsx";
+import ImagePage from "../../composants/ImagePage/ImagePage.jsx";
 
 export default function APropos() {
   return (
