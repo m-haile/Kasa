@@ -1,21 +1,23 @@
-import Accueil from "./pages/accueil/accueil.jsx";
+import Accueil from "./pages/Accueil/Accueil.jsx";
 import Header from "./composants/Header/Header.jsx";
 import Footer from "./composants/Footer/Footer.jsx";
-import Thumb from "./composants/Thumb/Thumb.jsx";
-import Collapse from "./composants/Collapse/Collapse.jsx";
-
 import "./App.scss";
-import ImagePage from "./composants/ImagePage/ImagePage.jsx";
-
-import Montagne from "./assets/montagne.png";
 import APropos from "./pages/APropos/APropos.jsx";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 function App() {
   return (
     <>
       <div className="container">
         <Header />
-        <APropos />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/apropos" element={<APropos />} />
+
+            {/* <Route path="*" element={<Error404 />} /> */}
+          </Routes>
+        </BrowserRouter>
       </div>
       <Footer />
     </>
