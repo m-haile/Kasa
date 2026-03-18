@@ -1,15 +1,33 @@
 .image-page {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    background-color: gray;
     border-radius: 25px;
-    width: 1240px;
-    height: 223px;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    filter: brightness(70%);
+
+    @media screen and (max-width: 500px) {
+      border-radius: 10px;
+      height: 110px;
+    }
   }
+
   h1 {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    border: 1px;
+    margin: auto;
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    }
   }
 }
