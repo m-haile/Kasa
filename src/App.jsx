@@ -8,18 +8,19 @@ import { BrowserRouter, Routes, Route } from "react-router";
 function App() {
   return (
     <>
-      <div className="container">
-        <Header />
-        <BrowserRouter>
+      <BrowserRouter>
+        <div className="container">
+          <Header />
+
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/apropos" element={<APropos />} />
 
             {/* <Route path="*" element={<Error404 />} /> */}
           </Routes>
-        </BrowserRouter>
-      </div>
-      <Footer />
+        </div>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
