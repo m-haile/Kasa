@@ -67,12 +67,5 @@ button:focus-visible {
   }
 }
 
-/* Code Ajouté */
 
-#root{
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  padding: 0;
-}
+

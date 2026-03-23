@@ -1,0 +1,47 @@
+.erreur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    color: #ff6060;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 288px;
+    margin: 0;
+
+    @media screen and (max-width: 500px) {
+      font-size: 96px;
+      width: 198px;
+      height: 99px;
+    }
+  }
+  p {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    text-align: center;
+
+    height: 52px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #000000;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration-style: solid;
+
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+}

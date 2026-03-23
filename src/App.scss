@@ -1,5 +1,10 @@
 #root {
   text-align: center;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  padding: 0;
 }
 
 .logo {
@@ -41,6 +46,9 @@
 .container {
   margin: 40px auto;
   max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
 
   @media screen and (max-width: 500px) {
     margin: 20px auto;
