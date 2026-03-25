@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router";
+import { useParams, useNavigate, Link } from "react-router";
 import "./Logement.scss";
 import Carrousel from "../../composants/Carrousel/Carrousel";
 import logements from "../../assets/logements.json";
@@ -43,7 +43,11 @@ export default function Logement() {
       <Avis note={logement.rating} />
       <div className="listes">
         <Collapse titre="Description">{logement.description}</Collapse>
-        <Collapse titre="Équipements">{logement.equipments.map((equipment)=>)}</Collapse>
+        <Collapse titre="Équipements">
+          {logement.equipments.map((equipment, i) => (
+            <li key={i}>{equipment}</li>
+          ))}
+        </Collapse>
       </div>
     </div>
   );
