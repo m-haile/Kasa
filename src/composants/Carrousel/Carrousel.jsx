@@ -5,12 +5,12 @@ import { useState } from "react";
 export default function Carrousel({ images }) {
   const [index, setIndex] = useState(0);
 
-  function suivant() {
+  function suivante() {
     const indexSuivant = index + 1 < images.length ? index + 1 : 0;
     setIndex(indexSuivant);
   }
 
-  function precedent() {
+  function precedente() {
     const indexPrecedent = index - 1 > 0 ? index - 1 : images.length - 1;
     setIndex(indexPrecedent);
   }
@@ -23,18 +23,18 @@ export default function Carrousel({ images }) {
         <>
           <img
             src={flecheDroite}
-            alt=""
+            alt="image suivante"
             className="image-apres"
-            onClick={suivant}
+            onClick={suivante}
           />
           <img
             src={flecheDroite}
-            alt=""
+            alt="image précédente"
             className="image-avant"
-            onClick={precedent}
+            onClick={precedente}
           />
           <span>
-            {index}/{images.length}
+            {index + 1}/{images.length}
           </span>
         </>
       )}

@@ -3,6 +3,9 @@ import "./Logement.scss";
 import Carrousel from "../../composants/Carrousel/Carrousel";
 import logements from "../../assets/logements.json";
 import { useEffect } from "react";
+import Tag from "../../composants/Tag/Tag";
+import Avis from "../../composants/Avis/Avis";
+import Collapse from "../../composants/Collapse/Collapse";
 
 export default function Logement() {
   const { id } = useParams();
@@ -23,6 +26,25 @@ export default function Logement() {
     <div className="logement">
       <Carrousel images={logement.pictures} />
       <h1>{logement.title}</h1>
+      <span className="location">{logement.location}</span>
+      <div className="tags">
+        {logement.tags.map((tag, i) => (
+          <Tag key={i} tagName={tag} />
+        ))}
+      </div>
+      <div className="host">
+        <span className="name">{logement.host.name}</span>
+        <img
+          src={logement.host.picture}
+          alt={logement.host.name}
+          className="avatar"
+        />
+      </div>
+      <Avis note={logement.rating} />
+      <div className="listes">
+        <Collapse titre="Description">{logement.description}</Collapse>
+        <Collapse titre="Équipements">{logement.equipments.map((equipment)=>)}</Collapse>
+      </div>
     </div>
   );
 }
