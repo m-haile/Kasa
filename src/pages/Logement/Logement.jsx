@@ -25,22 +25,30 @@ export default function Logement() {
   return (
     <div className="logement">
       <Carrousel images={logement.pictures} />
-      <h1>{logement.title}</h1>
-      <span className="location">{logement.location}</span>
-      <div className="tags">
-        {logement.tags.map((tag, i) => (
-          <Tag key={i} tagName={tag} />
-        ))}
+      <div className="milieu">
+        <div className="titre-location-tags">
+          <div className="titre-location">
+            <h1>{logement.title}</h1>
+            <span className="location">{logement.location}</span>
+          </div>
+          <div className="tags">
+            {logement.tags.map((tag, i) => (
+              <Tag key={i} tagName={tag} />
+            ))}
+          </div>
+        </div>
+        <div className="host-avis">
+          <div className="host">
+            <span className="name">{logement.host.name}</span>
+            <img
+              src={logement.host.picture}
+              alt={logement.host.name}
+              className="avatar"
+            />
+          </div>
+          <Avis note={logement.rating} />
+        </div>
       </div>
-      <div className="host">
-        <span className="name">{logement.host.name}</span>
-        <img
-          src={logement.host.picture}
-          alt={logement.host.name}
-          className="avatar"
-        />
-      </div>
-      <Avis note={logement.rating} />
       <div className="listes">
         <Collapse titre="Description">{logement.description}</Collapse>
         <Collapse titre="Équipements">

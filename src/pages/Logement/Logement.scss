@@ -1,3 +1,108 @@
 .logement {
   color: black;
+
+  .milieu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      margin-bottom: 13px;
+    }
+
+    .titre-location-tags {
+      .tags {
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .titre-location {
+        margin-top: 5px;
+        text-align: left;
+
+        h1 {
+          font-weight: 500;
+          font-size: 36px;
+          color: #ff6060;
+          text-align: left;
+          margin-bottom: 0;
+
+          @media screen and (max-width: 500px) {
+            font-size: 18px;
+          }
+        }
+
+        .location {
+          font-weight: 500;
+          font-size: 18px;
+
+          @media screen and (max-width: 500px) {
+            font-size: 14px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    .host-avis {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      @media screen and (max-width: 500px) {
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+      .host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .name {
+          font-weight: 500;
+          font-size: 18px;
+          text-align: right;
+          color: #ff6060;
+          width: min-content;
+
+          @media screen and (max-width: 500px) {
+            line-height: 143%;
+            font-size: 12px;
+          }
+        }
+
+        .avatar {
+          width: 64px;
+          height: 64px;
+          object-fit: cover;
+          border-radius: 64px;
+
+          @media screen and (max-width: 500px) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .listes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
 }

@@ -1,0 +1,10 @@
+.avis {
+  display: flex;
+  align-items: center;
+
+  .etoile {
+    @media screen and (max-width: 500px) {
+      width: 18px;
+    }
+  }
+}
