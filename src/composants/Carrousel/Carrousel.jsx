@@ -3,6 +3,7 @@ import flecheDroite from "../../assets/flecheDroite.png";
 import { useState } from "react";
 
 export default function Carrousel({ images }) {
+  //setIndex permet à react de savoir qu'il faut se mettre à jour.
   const [index, setIndex] = useState(0);
 
   function suivante() {

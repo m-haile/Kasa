@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Link } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import "./Logement.scss";
 import Carrousel from "../../composants/Carrousel/Carrousel";
 import logements from "../../assets/logements.json";
@@ -8,15 +8,16 @@ import Avis from "../../composants/Avis/Avis";
 import Collapse from "../../composants/Collapse/Collapse";
 
 export default function Logement() {
-  const { id } = useParams();
+  const { id } = useParams(); // pour récupérer l'id dans l'URL
   const navigate = useNavigate();
-  const logement = logements.find((l) => l.id === id);
+  const logement = logements.find((l) => l.id === id); //l(L) pour logement // find pour trouver un élément de tableau
 
+  //if the logemnt is changed useEffect called.
   useEffect(() => {
     if (!logement) {
       navigate("/erreur");
     }
-  }, [logement, navigate]);
+  }, [logement, navigate]); // dépendance
 
   if (!logement) {
     return null;
